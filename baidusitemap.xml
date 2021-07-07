@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://jrueichen.github.io/cn/Hexo-Theme-LiveMyLife/</loc>
+    <loc>https://jrueichen.github.io/cn/cn/Hexo-Theme-LiveMyLife/</loc>
     <lastmod>2020-04-16</lastmod>
   </url>
   <url>
-    <loc>https://jrueichen.github.io/en/Hexo-Theme-LiveMyLife/</loc>
+    <loc>https://jrueichen.github.io/cn/en/Hexo-Theme-LiveMyLife/</loc>
     <lastmod>2020-04-16</lastmod>
   </url>
   <url>
-    <loc>https://jrueichen.github.io/cn/afternoonquite/</loc>
+    <loc>https://jrueichen.github.io/cn/cn/afternoonquite/</loc>
     <lastmod>2017-07-31</lastmod>
   </url>
 </urlset> 
