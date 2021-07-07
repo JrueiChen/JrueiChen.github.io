@@ -2,49 +2,49 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://jrueichen.github.io/tags/index.html</loc>
+    <loc>https://jrueichen.life/tags/index.html</loc>
     
     <lastmod>2021-07-06</lastmod>
     
   </url>
   
   <url>
-    <loc>https://jrueichen.github.io/categories/index.html</loc>
+    <loc>https://jrueichen.life/categories/index.html</loc>
     
     <lastmod>2021-07-06</lastmod>
     
   </url>
   
   <url>
-    <loc>https://jrueichen.github.io/404.html</loc>
+    <loc>https://jrueichen.life/404.html</loc>
     
     <lastmod>2021-07-06</lastmod>
     
   </url>
   
   <url>
-    <loc>https://jrueichen.github.io/cn/Hexo-Theme-LiveMyLife/</loc>
+    <loc>https://jrueichen.life/cn/Hexo-Theme-LiveMyLife/</loc>
     
     <lastmod>2020-04-16</lastmod>
     
   </url>
   
   <url>
-    <loc>https://jrueichen.github.io/en/Hexo-Theme-LiveMyLife/</loc>
+    <loc>https://jrueichen.life/en/Hexo-Theme-LiveMyLife/</loc>
     
     <lastmod>2020-04-16</lastmod>
     
   </url>
   
   <url>
-    <loc>https://jrueichen.github.io/archive/index.html</loc>
+    <loc>https://jrueichen.life/archive/index.html</loc>
     
     <lastmod>2017-03-20</lastmod>
     
   </url>
   
   <url>
-    <loc>https://jrueichen.github.io/about/index.html</loc>
+    <loc>https://jrueichen.life/about/index.html</loc>
     
     <lastmod>2016-04-20</lastmod>
     
@@ -52,16 +52,16 @@
   
 
   <url>
-    <loc>https://jrueichen.github.io/</loc>
-    <lastmod>2021-07-06</lastmod>
+    <loc>https://jrueichen.life/</loc>
+    <lastmod>2021-07-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
   
   <url>
-    <loc>https://jrueichen.github.io/tags/Hexo-Theme-LiveMyLife/</loc>
-    <lastmod>2021-07-06</lastmod>
+    <loc>https://jrueichen.life/tags/Hexo-Theme-LiveMyLife/</loc>
+    <lastmod>2021-07-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
@@ -69,8 +69,8 @@
 
   
   <url>
-    <loc>https://jrueichen.github.io/categories/Hexo-Theme-LiveMyLife/</loc>
-    <lastmod>2021-07-06</lastmod>
+    <loc>https://jrueichen.life/categories/Hexo-Theme-LiveMyLife/</loc>
+    <lastmod>2021-07-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
