@@ -150,7 +150,7 @@
 
 <!-- hack iOS CSS :active style -->
 
-	<body ontouchstart="" class="body--light body--dark">
+	<body ontouchstart="" class="body--light body--light">
 
 
 		<!-- ThemeColor -->
@@ -184,7 +184,7 @@
       ? b.pop()
       : '';
   }
-  let themeMode = 'dark';
+  let themeMode = 'light';
   if (getCookieValue('sb-color-mode') && (getCookieValue('sb-color-mode') !== themeMode)) {
     let dbody = document.body.classList;
     themeMode === 'dark' ? dbody.remove('body--dark') : dbody.add('body--dark');
@@ -247,17 +247,6 @@
           
           
           <li>
-            <a href="/tags/">
-              
-              TAGS
-              
-              
-            </a>
-          </li>
-          
-          
-          
-          <li>
             <a href="/about/">
               
               ABOUT
@@ -269,9 +258,9 @@
           
           
           <li>
-            <a href="/archive/">
+            <a href="/tags/">
               
-              ARCHIVES
+              TAGS
               
               
             </a>
@@ -283,6 +272,17 @@
             <a href="/categories/">
               
               CATEGORIES
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/archive/">
+              
+              ARCHIVES
               
               
             </a>
@@ -347,12 +347,12 @@
   <style type="text/css">
     .body--light {
       /* intro-header */
-      --intro-header-background-image-url-home: url('/img/header_img/newhome_bg.jpg');
+      --intro-header-background-image-url-home: url('/img/header_img/hide.jpg');
       --intro-header-background-image-url-post: url('img/header_img/tag_bg.jpg');
       --intro-header-background-image-url-page: url('/img/header_img/tag_bg.jpg');
     }
     .body--dark {
-      --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/newhome_bg.jpg');
+      --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/hide.jpg');
       --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('img/header_img/tag_bg.jpg');
       --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/tag_bg.jpg');
     }
@@ -435,15 +435,65 @@
       <!-- 标签云 -->
       <div id='tag_cloud' class="tags">
         
-        <a href="#心情" title="心情" rel="3">心情</a>
-        
         <a href="#Java" title="Java" rel="1">Java</a>
         
         <a href="#数据结构" title="数据结构" rel="1">数据结构</a>
         
+        <a href="#心情" title="心情" rel="2">心情</a>
+        
+        <a href="#故事" title="故事" rel="1">故事</a>
+        
       </div>
 
       <!-- 标签列表 -->
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="Java">
+          <span class="tag-text">Java</span>
+        </span>
+        
+        <div class="post-preview">
+          <a href="/undefined/BigNumberOperation/">
+            <h2 class="post-title">
+              大数乘积
+              
+              -- 
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              看天大的数字是怎么在代码里面进行玩耍的……
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="数据结构">
+          <span class="tag-text">数据结构</span>
+        </span>
+        
+        <div class="post-preview">
+          <a href="/undefined/BigNumberOperation/">
+            <h2 class="post-title">
+              大数乘积
+              
+              -- 
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              看天大的数字是怎么在代码里面进行玩耍的……
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+      </div>
       
       <div class="one-tag-list">
         <span class="fa fa-tag listing-seperator" id="心情">
@@ -461,23 +511,6 @@
             
             <h3 class="post-subtitle">
               一个男孩在注视天空……
-            </h3>
-            
-          </a>
-        </div>
-        <hr>
-        
-        <div class="post-preview">
-          <a href="/undefined/Nightmare/">
-            <h2 class="post-title">
-              一个噩梦
-              
-              -- 
-              
-            </h2>
-            
-            <h3 class="post-subtitle">
-              开着空调睡觉，醒来发现空调竟然被人关了……
             </h3>
             
           </a>
@@ -504,45 +537,21 @@
       </div>
       
       <div class="one-tag-list">
-        <span class="fa fa-tag listing-seperator" id="Java">
-          <span class="tag-text">Java</span>
+        <span class="fa fa-tag listing-seperator" id="故事">
+          <span class="tag-text">故事</span>
         </span>
         
         <div class="post-preview">
-          <a href="/undefined/BigNumberOperation/">
+          <a href="/undefined/Nightmare/">
             <h2 class="post-title">
-              数据结构练习题——大数乘积
+              一个噩梦
               
               -- 
               
             </h2>
             
             <h3 class="post-subtitle">
-              看天大的数字是怎么在代码里面进行玩耍的……
-            </h3>
-            
-          </a>
-        </div>
-        <hr>
-        
-      </div>
-      
-      <div class="one-tag-list">
-        <span class="fa fa-tag listing-seperator" id="数据结构">
-          <span class="tag-text">数据结构</span>
-        </span>
-        
-        <div class="post-preview">
-          <a href="/undefined/BigNumberOperation/">
-            <h2 class="post-title">
-              数据结构练习题——大数乘积
-              
-              -- 
-              
-            </h2>
-            
-            <h3 class="post-subtitle">
-              看天大的数字是怎么在代码里面进行玩耍的……
+              开着空调睡觉，醒来发现空调竟然被人关了……
             </h3>
             
           </a>

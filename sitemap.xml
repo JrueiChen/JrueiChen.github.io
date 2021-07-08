@@ -74,13 +74,6 @@
 
   
   <url>
-    <loc>https://jrueichen.top/tags/%E5%BF%83%E6%83%85/</loc>
-    <lastmod>2021-07-08</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://jrueichen.top/tags/Java/</loc>
     <lastmod>2021-07-08</lastmod>
     <changefreq>daily</changefreq>
@@ -94,14 +87,21 @@
     <priority>0.6</priority>
   </url>
   
-
-  
   <url>
-    <loc>https://jrueichen.top/categories/%E9%9A%8F%E7%AC%94/</loc>
+    <loc>https://jrueichen.top/tags/%E5%BF%83%E6%83%85/</loc>
     <lastmod>2021-07-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
+  
+  <url>
+    <loc>https://jrueichen.top/tags/%E6%95%85%E4%BA%8B/</loc>
+    <lastmod>2021-07-08</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+
   
   <url>
     <loc>https://jrueichen.top/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/</loc>
@@ -111,7 +111,14 @@
   </url>
   
   <url>
-    <loc>https://jrueichen.top/categories/%E6%95%85%E4%BA%8B/</loc>
+    <loc>https://jrueichen.top/categories/%E9%9A%8F%E7%AC%94/</loc>
+    <lastmod>2021-07-08</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://jrueichen.top/categories/%E6%97%A5%E5%B8%B8/</loc>
     <lastmod>2021-07-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>

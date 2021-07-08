@@ -150,7 +150,7 @@
 
 <!-- hack iOS CSS :active style -->
 
-	<body ontouchstart="" class="body--light body--dark">
+	<body ontouchstart="" class="body--light body--light">
 
 
 		<!-- ThemeColor -->
@@ -184,7 +184,7 @@
       ? b.pop()
       : '';
   }
-  let themeMode = 'dark';
+  let themeMode = 'light';
   if (getCookieValue('sb-color-mode') && (getCookieValue('sb-color-mode') !== themeMode)) {
     let dbody = document.body.classList;
     themeMode === 'dark' ? dbody.remove('body--dark') : dbody.add('body--dark');
@@ -247,17 +247,6 @@
           
           
           <li>
-            <a href="/tags/">
-              
-              TAGS
-              
-              
-            </a>
-          </li>
-          
-          
-          
-          <li>
             <a href="/about/">
               
               ABOUT
@@ -269,9 +258,9 @@
           
           
           <li>
-            <a href="/archive/">
+            <a href="/tags/">
               
-              ARCHIVES
+              TAGS
               
               
             </a>
@@ -283,6 +272,17 @@
             <a href="/categories/">
               
               CATEGORIES
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/archive/">
+              
+              ARCHIVES
               
               
             </a>
@@ -347,12 +347,12 @@
   <style type="text/css">
     .body--light {
       /* intro-header */
-      --intro-header-background-image-url-home: url('/img/header_img/newhome_bg.jpg');
+      --intro-header-background-image-url-home: url('/img/header_img/hide.jpg');
       --intro-header-background-image-url-post: url('');
       --intro-header-background-image-url-page: url('/img/header_img/archive_bg2.jpg');
     }
     .body--dark {
-      --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/newhome_bg.jpg');
+      --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/hide.jpg');
       --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('');
       --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/archive_bg2.jpg');
     }
@@ -360,7 +360,7 @@
     header.intro-header {
        /*config*/
         background-image: var(--intro-header-background-image-url-home);
-        /* background-image: url('/img/header_img/newhome_bg.jpg'); */
+        /* background-image: url('/img/header_img/hide.jpg'); */
       
     }
 
@@ -465,8 +465,8 @@
     </h3>
     <div class="post-content-preview">
       
-​		今天在家里的储物堆旁不知怎么睡着了，醒来已经是一片寂静，借着一点微弱的光线还能看清杂物的各种棱角。迷迷糊糊，突然闻到一股很熟味道，不知道是书本还是灰尘的味道。但是瞬间让我清醒了。。。
-​		嘛，这个味道很熟。小时候的小时候，白天里心情不好就躲在这里。但看到这些棱角有时也感到好不安，总觉得会有什么人脸兽身或者人身兽脸的东西跳出来。所以，到了晚上万不得已被母上大人叫去拿东西都是一脸不情愿......
+​        今天在家里的储物堆旁不知怎么睡着了，醒来已经是一片寂静，借着一点微弱的光线还能看清杂物的各种棱角。迷迷糊糊，突然闻到一股很熟味道，不知道是书本还是灰尘的味道。但是瞬间让我清醒了。。。
+​        嘛，这个味道很熟。小时候的小时候，白天里心情不好就躲在这里。但看到这些棱角有时也感到好不安，总觉得会有什么人脸兽身或者人身兽脸的东西跳出来。所以，到了晚上万不得已被母上大人......
     </div>
   </a>
   
@@ -493,7 +493,7 @@
 
   <a href="/undefined/BigNumberOperation/">
     <h2 class="post-title">
-      数据结构练习题——大数乘积
+      大数乘积
     </h2>
     <h3 class="post-subtitle">
       看天大的数字是怎么在代码里面进行玩耍的……
@@ -541,7 +541,8 @@ abcde x pqrstz
     </h3>
     <div class="post-content-preview">
       一个噩梦
-​		最近的天气真是闷的不行，好像老天爷憋着一口气，随时都想要吐出来。不过还好，一堆乌云聚集过来，眼看大雨将至。在局里一个昏暗而又拥挤的资料室里，我们穿过一架架摆满各种错乱、盖有印章的纸和黄色文件夹的书架，来到一个窗户恰好照到的，一张满是刮痕的木质桌旁。同事嬉笑说终于盼到雨来了。微胖强壮的局长一脸严肃地看着手中的信件。我们到了之后，他把目光扫向桌面上那封染有几滴暗红色的白色信封。局......
+(本文建议关灯环境下阅读)
+​        最近的天气真是闷的不行，好像老天爷憋着一口气，随时都想要吐出来。不过还好，一堆乌云聚集过来，眼看大雨将至。在局里一个昏暗而又拥挤的资料室里，我们穿过一架架摆满各种错乱、盖有印章的纸和黄色文件夹的书架，来到一个窗户恰好照到的，一张满是刮痕的木质桌旁。同事嬉笑说终于盼到雨来了。微胖强壮的局长一脸严肃地看着手中的信件。我们到了之后，他把目光扫......
     </div>
   </a>
   
@@ -551,7 +552,7 @@ abcde x pqrstz
   </p>
   <div class="tags">
     
-    <a href="/tags/#心情" title="心情">心情</a>
+    <a href="/tags/#故事" title="故事">故事</a>
     
   </div>
   
@@ -592,7 +593,8 @@ abcde x pqrstz
 恰好落的雨，
 又恰好依偎在一起。
 雨停了，就可以放他走了。
-![earpho......
+
+（本文为原创作......
     </div>
   </a>
   
@@ -654,15 +656,19 @@ abcde x pqrstz
   <div class="tags">
     
     
-    <a href="/tags/#心情" title="心情" rel="3">心情</a>
-    
-    
-    
     <a href="/tags/#Java" title="Java" rel="1">Java</a>
     
     
     
     <a href="/tags/#数据结构" title="数据结构" rel="1">数据结构</a>
+    
+    
+    
+    <a href="/tags/#心情" title="心情" rel="2">心情</a>
+    
+    
+    
+    <a href="/tags/#故事" title="故事" rel="1">故事</a>
     
     
   </div>
@@ -744,7 +750,7 @@ abcde x pqrstz
   <ul>
     
     <a href="undefined/BigNumberOperation/">
-      <li>数据结构练习题——大数乘积</li>
+      <li>大数乘积</li>
     </a>
     
     <a href="undefined/Nightmare/">
@@ -799,16 +805,16 @@ abcde x pqrstz
 <div class="widget">
   <ul>
     
-    <a href="/categories/#随笔">
-      <li>随笔</li>
-    </a>
-    
     <a href="/categories/#计算机">
       <li>计算机</li>
     </a>
     
-    <a href="/categories/#故事">
-      <li>故事</li>
+    <a href="/categories/#随笔">
+      <li>随笔</li>
+    </a>
+    
+    <a href="/categories/#日常">
+      <li>日常</li>
     </a>
     
   </ul>
