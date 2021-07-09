@@ -145,7 +145,11 @@
       Categories - 欢迎来到我的茶馆~
     
   </title>
-<meta name="generator" content="Hexo 5.4.0"></head>
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.4.0"></head>
 
 
 <!-- hack iOS CSS :active style -->
@@ -244,8 +248,6 @@
 
           
           
-          
-          
           <li>
             <a href="/about/">
               
@@ -257,10 +259,12 @@
           
           
           
+          
+          
           <li>
-            <a href="/tags/">
+            <a href="/archive/">
               
-              TAGS
+              ARCHIVES
               
               
             </a>
@@ -280,9 +284,9 @@
           
           
           <li>
-            <a href="/archive/">
+            <a href="/tags/">
               
-              ARCHIVES
+              TAGS
               
               
             </a>
@@ -437,48 +441,19 @@
       <!-- 标签云 -->
       <div id='tag_cloud' class="tags">
         
-        <a href="#计算机" title="计算机" rel="1">计算机</a>
-        
         <a href="#随笔" title="随笔" rel="2">随笔</a>
         
-        <a href="#日常" title="日常" rel="1">日常</a>
+        <a href="#数学" title="数学" rel="1">数学</a>
+        
+        <a href="#计算机" title="计算机" rel="1">计算机</a>
         
         <a href="#他人作品" title="他人作品" rel="1">他人作品</a>
         
-        <a href="#数学" title="数学" rel="1">数学</a>
+        <a href="#日常" title="日常" rel="1">日常</a>
         
       </div>
 
       <!-- 标签列表 -->
-      
-      <div class="one-tag-list">
-        <span class="fa fa-tag listing-seperator" id="计算机">
-          <span class="tag-text">计算机</span>
-        </span>
-        
-        <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-        <div class="post-preview">
-          <a href="/undefined/BigNumberOperation/">
-            <h2 class="post-title">
-              大数乘积
-              
-              -- 
-              
-            </h2>
-            
-            <h3 class="post-subtitle">
-              看天大的数字是怎么在代码里面进行玩耍的……
-            </h3>
-            
-          </a>
-          <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-        </div>
-        <hr>
-        
-      </div>
       
       <div class="one-tag-list">
         <span class="fa fa-tag listing-seperator" id="随笔">
@@ -532,8 +507,8 @@
       </div>
       
       <div class="one-tag-list">
-        <span class="fa fa-tag listing-seperator" id="日常">
-          <span class="tag-text">日常</span>
+        <span class="fa fa-tag listing-seperator" id="数学">
+          <span class="tag-text">数学</span>
         </span>
         
         <!-- <li class="listing-item">
@@ -541,16 +516,45 @@
                   <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
                   </li> -->
         <div class="post-preview">
-          <a href="/undefined/Nightmare/">
+          <a href="/undefined/logistics/">
             <h2 class="post-title">
-              一个噩梦
+              人口增长模型（logistics）
               
               -- 
               
             </h2>
             
             <h3 class="post-subtitle">
-              开着空调睡觉，醒来发现空调竟然被人关了……
+              世界人口总量这么大，人口数量会一直增长下去吗？
+            </h3>
+            
+          </a>
+          <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="计算机">
+          <span class="tag-text">计算机</span>
+        </span>
+        
+        <!-- <li class="listing-item">
+                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                  </li> -->
+        <div class="post-preview">
+          <a href="/undefined/BigNumberOperation/">
+            <h2 class="post-title">
+              大数乘积
+              
+              -- 
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              看天大的数字是怎么在代码里面进行玩耍的……
             </h3>
             
           </a>
@@ -590,8 +594,8 @@
       </div>
       
       <div class="one-tag-list">
-        <span class="fa fa-tag listing-seperator" id="数学">
-          <span class="tag-text">数学</span>
+        <span class="fa fa-tag listing-seperator" id="日常">
+          <span class="tag-text">日常</span>
         </span>
         
         <!-- <li class="listing-item">
@@ -599,16 +603,16 @@
                   <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
                   </li> -->
         <div class="post-preview">
-          <a href="/undefined/logistics/">
+          <a href="/undefined/Nightmare/">
             <h2 class="post-title">
-              人口增长模型（logistics）
+              一个噩梦
               
               -- 
               
             </h2>
             
             <h3 class="post-subtitle">
-              世界人口总量这么大，人口数量会一直增长下去吗？
+              开着空调睡觉，醒来发现空调竟然被人关了……
             </h3>
             
           </a>
