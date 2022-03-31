@@ -72,6 +72,13 @@
   </url>
   
   <url>
+    <loc>https://jrueichen.top/undefined/Totoro/</loc>
+    
+    <lastmod>2018-12-15</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://jrueichen.top/undefined/April/</loc>
     
     <lastmod>2018-06-05</lastmod>
@@ -116,13 +123,6 @@
   </url>
   
   <url>
-    <loc>https://jrueichen.top/tags/%E6%95%85%E4%BA%8B/</loc>
-    <lastmod>2022-03-31</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://jrueichen.top/tags/Java/</loc>
     <lastmod>2022-03-31</lastmod>
     <changefreq>daily</changefreq>
@@ -131,6 +131,13 @@
   
   <url>
     <loc>https://jrueichen.top/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</loc>
+    <lastmod>2022-03-31</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://jrueichen.top/tags/%E6%95%85%E4%BA%8B/</loc>
     <lastmod>2022-03-31</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -160,14 +167,14 @@
   </url>
   
   <url>
-    <loc>https://jrueichen.top/categories/%E6%97%A5%E5%B8%B8/</loc>
+    <loc>https://jrueichen.top/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/</loc>
     <lastmod>2022-03-31</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://jrueichen.top/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/</loc>
+    <loc>https://jrueichen.top/categories/%E6%97%A5%E5%B8%B8/</loc>
     <lastmod>2022-03-31</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
