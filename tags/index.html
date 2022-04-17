@@ -248,23 +248,10 @@
 
           
           
-          
-          
           <li>
             <a href="/about/">
               
               ABOUT
-              
-              
-            </a>
-          </li>
-          
-          
-          
-          <li>
-            <a href="/archive/">
-              
-              ARCHIVES
               
               
             </a>
@@ -283,10 +270,23 @@
           
           
           
+          
+          
           <li>
             <a href="/tags/">
               
               TAGS
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/archive/">
+              
+              ARCHIVES
               
               
             </a>
@@ -439,11 +439,11 @@
       <!-- 标签云 -->
       <div id='tag_cloud' class="tags">
         
+        <a href="#心情" title="心情" rel="6">心情</a>
+        
         <a href="#Java" title="Java" rel="1">Java</a>
         
         <a href="#数据结构" title="数据结构" rel="1">数据结构</a>
-        
-        <a href="#心情" title="心情" rel="6">心情</a>
         
         <a href="#故事" title="故事" rel="2">故事</a>
         
@@ -454,54 +454,6 @@
       </div>
 
       <!-- 标签列表 -->
-      
-      <div class="one-tag-list">
-        <span class="fa fa-tag listing-seperator" id="Java">
-          <span class="tag-text">Java</span>
-        </span>
-        
-        <div class="post-preview">
-          <a href="/undefined/BigNumberOperation/">
-            <h2 class="post-title">
-              大数乘积
-              
-              -- 
-              
-            </h2>
-            
-            <h3 class="post-subtitle">
-              看天大的数字是怎么在代码里面进行玩耍的……
-            </h3>
-            
-          </a>
-        </div>
-        <hr>
-        
-      </div>
-      
-      <div class="one-tag-list">
-        <span class="fa fa-tag listing-seperator" id="数据结构">
-          <span class="tag-text">数据结构</span>
-        </span>
-        
-        <div class="post-preview">
-          <a href="/undefined/BigNumberOperation/">
-            <h2 class="post-title">
-              大数乘积
-              
-              -- 
-              
-            </h2>
-            
-            <h3 class="post-subtitle">
-              看天大的数字是怎么在代码里面进行玩耍的……
-            </h3>
-            
-          </a>
-        </div>
-        <hr>
-        
-      </div>
       
       <div class="one-tag-list">
         <span class="fa fa-tag listing-seperator" id="心情">
@@ -560,6 +512,23 @@
         <hr>
         
         <div class="post-preview">
+          <a href="/undefined/qiaolezi/">
+            <h2 class="post-title">
+              裹着心的光
+              
+              -- 
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              那些你很冒险的梦，我陪你去疯，折纸飞机碰到雨天，终究会坠落
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
           <a href="/undefined/Totoro/">
             <h2 class="post-title">
               宫崎先生的花园
@@ -593,17 +562,48 @@
         </div>
         <hr>
         
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="Java">
+          <span class="tag-text">Java</span>
+        </span>
+        
         <div class="post-preview">
-          <a href="/undefined/qiaolezi/">
+          <a href="/undefined/BigNumberOperation/">
             <h2 class="post-title">
-              裹着心的光
+              大数乘积
               
               -- 
               
             </h2>
             
             <h3 class="post-subtitle">
-              那些你很冒险的梦，我陪你去疯，折纸飞机碰到雨天，终究会坠落
+              看天大的数字是怎么在代码里面进行玩耍的……
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="数据结构">
+          <span class="tag-text">数据结构</span>
+        </span>
+        
+        <div class="post-preview">
+          <a href="/undefined/BigNumberOperation/">
+            <h2 class="post-title">
+              大数乘积
+              
+              -- 
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              看天大的数字是怎么在代码里面进行玩耍的……
             </h3>
             
           </a>
@@ -1193,5 +1193,20 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	</body>
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
 </html>
