@@ -211,7 +211,7 @@
 <!-- Docs:https://gitter.im/?utm_source=left-menu-logo -->
 <script>
   ((window.gitter = {}).chat = {}).options = {
-    room: '/#JrueiChen-github-io_community:gitter.im'
+    room: 'JrueiChen-github-io_community:gitter.im'
   };
 </script>
 <script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
@@ -239,15 +239,39 @@
       <div class="navbar-collapse">
         <ul class="nav navbar-nav navbar-right">
           <li>
-            <a href="/">HOME</a>
+            <a href="/">首页</a>
           </li>
 
+          
+          
+          
+          
+          <li>
+            <a href="/categories/">
+              
+              分类
+              
+              
+            </a>
+          </li>
+          
           
           
           <li>
             <a href="/about/">
               
-              ABOUT
+              关于
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/tags/">
+              
+              标签
               
               
             </a>
@@ -258,31 +282,7 @@
           <li>
             <a href="/archive/">
               
-              ARCHIVES
-              
-              
-            </a>
-          </li>
-          
-          
-          
-          <li>
-            <a href="/categories/">
-              
-              CATEGORIES
-              
-              
-            </a>
-          </li>
-          
-          
-          
-          
-          
-          <li>
-            <a href="/tags/">
-              
-              TAGS
+              归档
               
               
             </a>
@@ -293,7 +293,7 @@
           
           <li>
             <a class="popup-trigger">
-              <span class="search-icon"></span>SEARCH</a>
+              <span class="search-icon"></span>搜索</a>
           </li>
           
 
@@ -487,7 +487,7 @@
 <p>MATLAB代码如下：</p>
 <figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">clc</span><br><span class="line">clear</span><br><span class="line"><span class="comment">%输入t和x数据</span></span><br><span class="line">t=<span class="number">0</span>:<span class="number">22</span>;</span><br><span class="line">x=[<span class="number">3.9</span> <span class="number">5.3</span> <span class="number">7.2</span> <span class="number">9.6</span> <span class="number">12.9</span> <span class="number">17.1</span> <span class="number">23.2</span> <span class="number">31.4</span> <span class="number">38.6</span> <span class="number">50.2</span> <span class="number">62.9</span> <span class="number">76.0</span> <span class="number">92.0</span> <span class="number">105.7</span> <span class="number">122.8</span> <span class="number">131.7</span> <span class="number">150.7</span> <span class="number">179.3</span> <span class="number">203.2</span> <span class="number">226.5</span> <span class="number">248.7</span> <span class="number">281.4</span> <span class="number">308.7</span>];</span><br><span class="line"></span><br><span class="line"><span class="comment">%xt=x0(1+t)^t 化为线性方程得：</span></span><br><span class="line"><span class="comment">%ln(xt)=ln(x0)+tln(1+r),其中xl=ln(xt),xl0=ln(x0),x=t,b=ln(1+r)</span></span><br><span class="line"><span class="comment">%利用一阶多项式线性拟合</span></span><br><span class="line">xl=<span class="built_in">log</span>(x);</span><br><span class="line">p=polyfit(t,xl,<span class="number">1</span>)</span><br><span class="line"><span class="comment">%得出该拟合的方程值</span></span><br><span class="line">xp=polyval(p,t);</span><br><span class="line"><span class="comment">%求该拟合结果与线性方程真实值的标准差</span></span><br><span class="line">A=[xl;xp];</span><br><span class="line">xlxps=std(A);</span><br><span class="line"></span><br><span class="line"><span class="comment">%画图1,一阶多项式真实值与拟合值的对比</span></span><br><span class="line">subplot(<span class="number">2</span>,<span class="number">2</span>,<span class="number">1</span>)</span><br><span class="line"><span class="built_in">plot</span>(t,xp,<span class="string">&#x27;:o&#x27;</span>,t,xl,<span class="string">&#x27;-*&#x27;</span>)</span><br><span class="line">title(<span class="string">&#x27;指数部分一阶多项式真实值与拟合值的对比&#x27;</span>,<span class="string">&#x27;Color&#x27;</span>,<span class="string">&#x27;r&#x27;</span>);</span><br><span class="line"><span class="comment">%画图2，一阶多项式真实值与拟合值的标准差</span></span><br><span class="line">subplot(<span class="number">2</span>,<span class="number">2</span>,<span class="number">2</span>)</span><br><span class="line"><span class="built_in">plot</span>(t,xlxps)</span><br><span class="line">title(<span class="string">&#x27;指数部分一阶多项式真实值与拟合值的标准差&#x27;</span>,<span class="string">&#x27;Color&#x27;</span>,<span class="string">&#x27;r&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">%还原得原方程</span></span><br><span class="line">X=<span class="built_in">exp</span>(p(<span class="number">2</span>)).*(<span class="built_in">exp</span>(p(<span class="number">1</span>)).^t);</span><br><span class="line">r=<span class="built_in">exp</span>(p(<span class="number">1</span>))<span class="number">-1</span></span><br><span class="line">x0=X(<span class="number">1</span>)</span><br><span class="line"><span class="comment">%求该还原方程与真实值的标准差</span></span><br><span class="line">B=[x;X];</span><br><span class="line">Xxs=std(B);</span><br><span class="line"></span><br><span class="line"><span class="comment">%画图3，原方程与真实值的对比</span></span><br><span class="line">subplot(<span class="number">2</span>,<span class="number">2</span>,<span class="number">3</span>)</span><br><span class="line"><span class="built_in">plot</span>(t,X,<span class="string">&#x27;:o&#x27;</span>,t,x,<span class="string">&#x27;-*&#x27;</span>)</span><br><span class="line">title(<span class="string">&#x27;原方程与真实值的对比&#x27;</span>,<span class="string">&#x27;Color&#x27;</span>,<span class="string">&#x27;r&#x27;</span>);</span><br><span class="line"><span class="comment">%画图4，原方程与真实值的标准差</span></span><br><span class="line">subplot(<span class="number">2</span>,<span class="number">2</span>,<span class="number">4</span>)</span><br><span class="line"><span class="built_in">plot</span>(t,Xxs)</span><br><span class="line">title(<span class="string">&#x27;原方程与真实值的标准差&#x27;</span>,<span class="string">&#x27;Color&#x27;</span>,<span class="string">&#x27;r&#x27;</span>);</span><br></pre></td></tr></table></figure>
 
-<p><img src="Model_1.jpg" alt="Model_1"></p>
+<p><img src="logistics/Model_1.jpg" alt="Model_1"></p>
 <p>&nbsp;</p>
 <h2 id="模型分析"><a href="#模型分析" class="headerlink" title="模型分析"></a>模型分析</h2><p>通过图像我们可以看出，这种将增长率确定为不变的方法的拟合效果并不是非常好。虽然增长率的误差变化不大，但是最终得到的原方程拟合效果在18年后却完全脱离了实际情况。为了能够解决这种情况，接下来的指数增长模型二是将指数部分单独拟合。</p>
 <hr>
@@ -501,7 +501,7 @@
 <p>MATLAB代码如下：</p>
 <figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">clc</span><br><span class="line">clear</span><br><span class="line"><span class="comment">%输入t和x数据</span></span><br><span class="line">t=<span class="number">1</span>:<span class="number">22</span>;</span><br><span class="line">x=[<span class="number">3.9</span> <span class="number">5.3</span> <span class="number">7.2</span> <span class="number">9.6</span> <span class="number">12.9</span> <span class="number">17.1</span> <span class="number">23.2</span> <span class="number">31.4</span> <span class="number">38.6</span> <span class="number">50.2</span> <span class="number">62.9</span> <span class="number">76.0</span> <span class="number">92.0</span> <span class="number">105.7</span> <span class="number">122.8</span> <span class="number">131.7</span> <span class="number">150.7</span> <span class="number">179.3</span> <span class="number">203.2</span> <span class="number">226.5</span> <span class="number">248.7</span> <span class="number">281.4</span>];</span><br><span class="line">xi=[<span class="number">0.2949</span> <span class="number">0.3113</span> <span class="number">0.2986</span> <span class="number">0.2969</span> <span class="number">0.2907</span> <span class="number">0.3012</span> <span class="number">0.3082</span> <span class="number">0.2452</span> <span class="number">0.2435</span> <span class="number">0.2420</span> <span class="number">0.2051</span> <span class="number">0.1914</span> <span class="number">0.1614</span> <span class="number">0.1457</span> <span class="number">0.1059</span> <span class="number">0.1059</span> <span class="number">0.1579</span> <span class="number">0.1464</span> <span class="number">0.1161</span> <span class="number">0.1004</span> <span class="number">0.1104</span> <span class="number">0.1349</span>];</span><br><span class="line">r=<span class="built_in">mean</span>(xi);</span><br><span class="line"></span><br><span class="line"><span class="comment">%xt=x0exp(rt) 通过求解常微分方程得：</span></span><br><span class="line">X2=(<span class="number">39.</span>*<span class="built_in">exp</span>((<span class="number">513.</span>*t)/<span class="number">2500</span>))/<span class="number">10</span></span><br><span class="line"></span><br><span class="line"><span class="comment">%求该还原方程与真实值的标准差</span></span><br><span class="line">B2=[x;X2];</span><br><span class="line">X2xs=std(B2);</span><br><span class="line"></span><br><span class="line"><span class="comment">%画图1，原方程与真实值的对比</span></span><br><span class="line">subplot(<span class="number">1</span>,<span class="number">2</span>,<span class="number">1</span>)</span><br><span class="line"><span class="built_in">plot</span>(t,X2,<span class="string">&#x27;:o&#x27;</span>,t,x,<span class="string">&#x27;-*&#x27;</span>)</span><br><span class="line">title(<span class="string">&#x27;原方程与真实值的对比&#x27;</span>,<span class="string">&#x27;Color&#x27;</span>,<span class="string">&#x27;r&#x27;</span>);</span><br><span class="line"><span class="comment">%画图2，原方程与真实值的标准差</span></span><br><span class="line">subplot(<span class="number">1</span>,<span class="number">2</span>,<span class="number">2</span>)</span><br><span class="line"><span class="built_in">plot</span>(t,X2xs)</span><br><span class="line">title(<span class="string">&#x27;原方程与真实值的标准差&#x27;</span>,<span class="string">&#x27;Color&#x27;</span>,<span class="string">&#x27;r&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">%其中常微分方程求解代码如下</span></span><br><span class="line">clc</span><br><span class="line">clear</span><br><span class="line"></span><br><span class="line">syms x(t)</span><br><span class="line">eqn = diff(x,t) == <span class="number">0.2052</span>*x;<span class="comment">%r=0.2052</span></span><br><span class="line">con = x(<span class="number">0</span>) ==<span class="number">3.9</span>;</span><br><span class="line">X2 = dsolve(eqn,con)</span><br></pre></td></tr></table></figure>
 
-<p><img src="Model_2.jpg" alt="Model_2"></p>
+<p><img src="logistics/Model_2.jpg" alt="Model_2"></p>
 <p>&nbsp;</p>
 <h2 id="模型分析-1"><a href="#模型分析-1" class="headerlink" title="模型分析"></a>模型分析</h2><p>从标准差图像中我们可以看出：该模型比指数增长模型一的标准差要小很多，要更加贴合实际，但是在14年左右还是出现较大的误差，然后也存在在20年之后模型完全脱离实际的情况。所以为了能够更好地贴合实际，我们将指数部分再一次进行优化。</p>
 <h1 id="改进后的指数增长模型"><a href="#改进后的指数增长模型" class="headerlink" title="改进后的指数增长模型"></a>改进后的指数增长模型</h1><h2 id="建模假设"><a href="#建模假设" class="headerlink" title="建模假设"></a>建模假设</h2><p>由于增长率不是一成不变的，所以我们对之前的模型进行重新的修改，将指数部分进行线性拟合，同时还是不考虑自然资源限制对人口增长的影响。</p>
@@ -511,12 +511,12 @@
 <p>其中，令r为一个线性函数</p>
 <p>$r&#x3D;r(t)&#x3D;r_{1}t+r_{0}$</p>
 <h2 id="模型求解-2"><a href="#模型求解-2" class="headerlink" title="模型求解"></a>模型求解</h2><p>使用MATLAB中的Curve Fitting Tool进行线性拟合得出$r_{1}&#x3D;-0.0114,r_{0}&#x3D;0.3252$</p>
-<p><img src="ExponentialPartialFitting.png" alt="ExponentialPartialFitting"></p>
+<p><img src="logistics/ExponentialPartialFitting.png" alt="ExponentialPartialFitting"></p>
 <p>将该数据带入到MATLAB中常微分方程的求解</p>
 <figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">clc</span><br><span class="line">clear</span><br><span class="line"></span><br><span class="line">syms x(t)</span><br><span class="line">eqn = diff(x,t) == (<span class="number">-0.0114</span>*t+<span class="number">0.3252</span>)*x;</span><br><span class="line">con = x(<span class="number">0</span>) ==<span class="number">3.9</span>;</span><br><span class="line">X3 = dsolve(eqn,con)</span><br><span class="line"></span><br><span class="line"><span class="comment">%得到拟合方程</span></span><br><span class="line">X=(<span class="number">39</span>*<span class="built_in">exp</span>(-(<span class="number">3</span>*t*(<span class="number">19</span>*t - <span class="number">1084</span>))/<span class="number">10000</span>))/<span class="number">10</span></span><br><span class="line"></span><br><span class="line">具体MATLAB代码如下</span><br><span class="line">clc</span><br><span class="line">clear</span><br><span class="line"><span class="comment">%输入x和y数据</span></span><br><span class="line">t=<span class="number">0</span>:<span class="number">21</span>;</span><br><span class="line">x=[<span class="number">3.9</span> <span class="number">5.3</span> <span class="number">7.2</span> <span class="number">9.6</span> <span class="number">12.9</span> <span class="number">17.1</span> <span class="number">23.2</span> <span class="number">31.4</span> <span class="number">38.6</span> <span class="number">50.2</span> <span class="number">62.9</span> <span class="number">76.0</span> <span class="number">92.0</span> <span class="number">105.7</span> <span class="number">122.8</span> <span class="number">131.7</span> <span class="number">150.7</span> <span class="number">179.3</span> <span class="number">203.2</span> <span class="number">226.5</span> <span class="number">248.7</span> <span class="number">281.4</span>];</span><br><span class="line">xi=[<span class="number">0.2949</span> <span class="number">0.3113</span> <span class="number">0.2986</span> <span class="number">0.2969</span> <span class="number">0.2907</span> <span class="number">0.3012</span> <span class="number">0.3082</span> <span class="number">0.2452</span> <span class="number">0.2435</span> <span class="number">0.2420</span> <span class="number">0.2051</span> <span class="number">0.1914</span> <span class="number">0.1614</span> <span class="number">0.1457</span> <span class="number">0.1059</span> <span class="number">0.1059</span> <span class="number">0.1579</span> <span class="number">0.1464</span> <span class="number">0.1161</span> <span class="number">0.1004</span> <span class="number">0.1104</span> <span class="number">0.1349</span>]</span><br><span class="line"></span><br><span class="line">X3=(<span class="number">39.</span>*<span class="built_in">exp</span>(-(<span class="number">3.</span>*t.*(<span class="number">19.</span>*t - <span class="number">1084</span>))/<span class="number">10000</span>))/<span class="number">10</span></span><br><span class="line"></span><br><span class="line"><span class="comment">%求该拟合结果与真实值的标准差</span></span><br><span class="line">A3=[x;X3];</span><br><span class="line">X3xs=std(A3);</span><br><span class="line"></span><br><span class="line"><span class="comment">%画图1，原方程与真实值的对比</span></span><br><span class="line">subplot(<span class="number">1</span>,<span class="number">2</span>,<span class="number">1</span>)</span><br><span class="line"><span class="built_in">plot</span>(t,X3,<span class="string">&#x27;:o&#x27;</span>,t,x,<span class="string">&#x27;-*&#x27;</span>)</span><br><span class="line">title(<span class="string">&#x27;原方程与真实值的对比&#x27;</span>,<span class="string">&#x27;Color&#x27;</span>,<span class="string">&#x27;r&#x27;</span>);</span><br><span class="line"><span class="comment">%画图2，原方程与真实值的标准差</span></span><br><span class="line">subplot(<span class="number">1</span>,<span class="number">2</span>,<span class="number">2</span>)</span><br><span class="line"><span class="built_in">plot</span>(t,X3xs)</span><br><span class="line">title(<span class="string">&#x27;原方程与真实值的标准差&#x27;</span>,<span class="string">&#x27;Color&#x27;</span>,<span class="string">&#x27;r&#x27;</span>);</span><br></pre></td></tr></table></figure>
 
 <p>结果如下图：</p>
-<p><img src="Model_3.jpg" alt="Model_3"></p>
+<p><img src="logistics/Model_3.jpg" alt="Model_3"></p>
 <p>&nbsp;</p>
 <h2 id="模型分析-2"><a href="#模型分析-2" class="headerlink" title="模型分析"></a>模型分析</h2><p>从该模型的结果我们可以看出，拟合数据和实际数据的标准差已经缩减的很小了，从左图中也可以很直观地看出两条曲线非常接近。虽然改进的指数增长模型考虑到增长率随时间的变化，计算结果有所改善，但是它没有反应增长率下降的原因，增长率行数形式也呈现出不确定性，给应用带来不便，为了建立更加符合实际情况的人口增长模型，必须考虑人口下降的机理，修改原来的模型假设。</p>
 <p>至此，三个模型的结果如下：</p>
@@ -711,14 +711,14 @@
 <h3 id="估计参数方法一"><a href="#估计参数方法一" class="headerlink" title="估计参数方法一"></a>估计参数方法一</h3><p>将常微分方程改写为</p>
 <p>$\frac{\frac{\mathrm{d} x}{\mathrm{d} t}}{x}&#x3D;r-\frac{r}{x_{m}},x(0)&#x3D;x_{0}$</p>
 <p>对于右端的 x 用线性最小二乘法估计$r和x_{m}，x_{0}$ 直接采用原始数据。</p>
-<p><img src="XAndTheGrowthRate.png" alt="XAndTheGrowthRate"></p>
+<p><img src="logistics/XAndTheGrowthRate.png" alt="XAndTheGrowthRate"></p>
 <p>&nbsp;</p>
 <p>图中 x 为人口数量，xi为增长率。通过Curve Fitting Tool线性拟合，我们可以得到$a&#x3D;r&#x3D;p2&#x3D;0.2805,b&#x3D;p1&#x3D;-0.0007969$，通过$b&#x3D;- \frac{x}{x_{m}}$ ，得到$x_{m}&#x3D;352.0$，再取$x_{0}&#x3D;3.9$得到模型。具体MATLAB代码如下：</p>
 <figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">clc</span><br><span class="line">clear</span><br><span class="line"><span class="comment">%y是实际的人口数量，yx是用符号求常微分方程的方程，x是ode45拟合后的人口数量</span></span><br><span class="line"><span class="comment">%ty，tx，t分别是y，yx，x下的横坐标</span></span><br><span class="line">ty=<span class="number">0</span>:<span class="number">21</span>;</span><br><span class="line">tx=<span class="number">0</span>:<span class="number">48</span>;</span><br><span class="line">y=[<span class="number">3.9</span> <span class="number">5.3</span> <span class="number">7.2</span> <span class="number">9.6</span> <span class="number">12.9</span> <span class="number">17.1</span> <span class="number">23.2</span> <span class="number">31.4</span> <span class="number">38.6</span> <span class="number">50.2</span> <span class="number">62.9</span> <span class="number">76.0</span> <span class="number">92.0</span> <span class="number">105.7</span> <span class="number">122.8</span> <span class="number">131.7</span> <span class="number">150.7</span> <span class="number">179.3</span> <span class="number">203.2</span> <span class="number">226.5</span> <span class="number">248.7</span> <span class="number">281.4</span>];</span><br><span class="line"></span><br><span class="line"><span class="comment">%这里的常微分方程的解在另一个脚本求得</span></span><br><span class="line">yx=<span class="number">352.</span>/(<span class="built_in">exp</span>(<span class="built_in">log</span>(<span class="number">3481.</span>/<span class="number">39</span>) - (<span class="number">561</span>*tx)./<span class="number">2000</span>) + <span class="number">1</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">%这里是求真实值y和拟合值yx的标准差</span></span><br><span class="line">A=[y;yx(<span class="number">1</span>:<span class="number">22</span>)];</span><br><span class="line">B=std(A);</span><br><span class="line">D=<span class="built_in">mean</span>(B)</span><br><span class="line"></span><br><span class="line"><span class="comment">%画图</span></span><br><span class="line">subplot(<span class="number">2</span>,<span class="number">1</span>,<span class="number">1</span>)</span><br><span class="line"><span class="built_in">plot</span>(tx,yx,<span class="string">&#x27;-o&#x27;</span>,ty,y,<span class="string">&#x27;-*&#x27;</span>);</span><br><span class="line">axis([<span class="number">0</span> <span class="number">50</span> <span class="number">0</span> <span class="number">360</span>]); </span><br><span class="line">subplot(<span class="number">2</span>,<span class="number">1</span>,<span class="number">2</span>)</span><br><span class="line"><span class="built_in">plot</span>(ty,B)</span><br><span class="line">axis([<span class="number">0</span> <span class="number">50</span> <span class="number">0</span> <span class="number">18</span>]);</span><br><span class="line"></span><br><span class="line"><span class="comment">%其中常微分方程的代码如下</span></span><br><span class="line">clc</span><br><span class="line">clear</span><br><span class="line"></span><br><span class="line">syms yx(t)</span><br><span class="line">eqn = diff(yx,t) == <span class="number">0.2805</span>.*yx.*(<span class="number">1</span>-yx./<span class="number">352</span>);</span><br><span class="line">con = yx(<span class="number">0</span>) ==<span class="number">3.9</span>;</span><br><span class="line">yS = dsolve(eqn,con)</span><br></pre></td></tr></table></figure>
 
 
 
-<p><img src="Model_4.jpg" alt="Model_4"></p>
+<p><img src="logistics/Model_4.jpg" alt="Model_4"></p>
 <p>&nbsp;</p>
 <h3 id="估计参数方法二"><a href="#估计参数方法二" class="headerlink" title="估计参数方法二"></a>估计参数方法二</h3><p>直接使用人口数据和非线性最小二乘法估计$r，x_{0}，x_{m}$。</p>
 <p>得出$r&#x3D;0.2155,x_{m}&#x3D;443.9940,x_{0}&#x3D;7.6963$,代入原方程得出模型。</p>
@@ -727,7 +727,7 @@
 
 
 
-<p><img src="Model_4_2.jpg" alt="Model_4_2"></p>
+<p><img src="logistics/Model_4_2.jpg" alt="Model_4_2"></p>
 <p>&nbsp;</p>
 <p>两个方法的拟合结果如下图：</p>
 <table>
@@ -920,7 +920,7 @@
 <div class="tip">
   <p>
     
-      If you like this blog or find it useful for you, you are welcome to comment on it. You are also welcome to share this blog, so that more people can participate in it. If the images used in the blog infringe your copyright, please contact the author to delete them. Thank you !
+      如果您喜欢此博客或发现它对您有用，则欢迎对此发表评论。 也欢迎您共享此博客，以便更多人可以参与。 如果博客中使用的图像侵犯了您的版权，请与作者联系以将其删除。 谢谢 ！
     
   </p>
 </div>
@@ -1043,7 +1043,7 @@
     
       <aside id="sidebar">
         <div id="toc" class="toc-article">
-        <strong class="toc-title">Contents</strong>
+        <strong class="toc-title">目录</strong>
         
           <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#%E5%BC%95%E5%85%A5"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">引入</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#%E6%8C%87%E6%95%B0%E5%A2%9E%E9%95%BF%E6%A8%A1%E5%9E%8B%E4%B8%80"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">指数增长模型一</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%A8%A1%E5%9E%8B%E5%81%87%E8%AE%BE"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">模型假设</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%A8%A1%E5%9E%8B%E6%9E%84%E5%BB%BA"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">模型构建</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%A8%A1%E5%9E%8B%E6%B1%82%E8%A7%A3"><span class="toc-nav-number">2.3.</span> <span class="toc-nav-text">模型求解</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%A8%A1%E5%9E%8B%E5%88%86%E6%9E%90"><span class="toc-nav-number">2.4.</span> <span class="toc-nav-text">模型分析</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#%E6%8C%87%E6%95%B0%E5%A2%9E%E9%95%BF%E6%A8%A1%E5%9E%8B%E4%BA%8C"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">指数增长模型二</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%A8%A1%E5%9E%8B%E5%81%87%E8%AE%BE-1"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">模型假设</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%A8%A1%E5%9E%8B%E6%9E%84%E5%BB%BA-1"><span class="toc-nav-number">3.2.</span> <span class="toc-nav-text">模型构建</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%A8%A1%E5%9E%8B%E6%B1%82%E8%A7%A3-1"><span class="toc-nav-number">3.3.</span> <span class="toc-nav-text">模型求解</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%A8%A1%E5%9E%8B%E5%88%86%E6%9E%90-1"><span class="toc-nav-number">3.4.</span> <span class="toc-nav-text">模型分析</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#%E6%94%B9%E8%BF%9B%E5%90%8E%E7%9A%84%E6%8C%87%E6%95%B0%E5%A2%9E%E9%95%BF%E6%A8%A1%E5%9E%8B"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">改进后的指数增长模型</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%BB%BA%E6%A8%A1%E5%81%87%E8%AE%BE"><span class="toc-nav-number">4.1.</span> <span class="toc-nav-text">建模假设</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%A8%A1%E5%9E%8B%E6%B1%82%E8%A7%A3-2"><span class="toc-nav-number">4.2.</span> <span class="toc-nav-text">模型求解</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%A8%A1%E5%9E%8B%E5%88%86%E6%9E%90-2"><span class="toc-nav-number">4.3.</span> <span class="toc-nav-text">模型分析</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#logistics%E6%A8%A1%E5%9E%8B"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">logistics模型</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%BB%BA%E6%A8%A1%E5%81%87%E8%AE%BE-1"><span class="toc-nav-number">5.1.</span> <span class="toc-nav-text">建模假设</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%A8%A1%E5%9E%8B%E6%9E%84%E5%BB%BA-2"><span class="toc-nav-number">5.2.</span> <span class="toc-nav-text">模型构建</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%A8%A1%E5%9E%8B%E6%B1%82%E8%A7%A3-3"><span class="toc-nav-number">5.3.</span> <span class="toc-nav-text">模型求解</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%BC%B0%E8%AE%A1%E5%8F%82%E6%95%B0%E6%96%B9%E6%B3%95%E4%B8%80"><span class="toc-nav-number">5.3.1.</span> <span class="toc-nav-text">估计参数方法一</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%BC%B0%E8%AE%A1%E5%8F%82%E6%95%B0%E6%96%B9%E6%B3%95%E4%BA%8C"><span class="toc-nav-number">5.3.2.</span> <span class="toc-nav-text">估计参数方法二</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%A8%A1%E5%9E%8B%E5%88%86%E6%9E%90-3"><span class="toc-nav-number">5.4.</span> <span class="toc-nav-text">模型分析</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#%E5%AE%9E%E9%AA%8C%E6%80%BB%E7%BB%93"><span class="toc-nav-number">6.</span> <span class="toc-nav-text">实验总结</span></a></li></ol>
         
@@ -1064,7 +1064,7 @@
         <section>
           <!-- no hr -->
           <h5>
-            <a href="/tags/">FEATURED TAGS</a>
+            <a href="/tags/">特色标签</a>
           </h5>
           <div class="tags">
             
@@ -1079,7 +1079,7 @@
         <!-- Friends Blog -->
         
         <hr>
-        <h5>FRIENDS</h5>
+        <h5>链友</h5>
         <ul class="list-inline">
 
           
@@ -1328,7 +1328,7 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
             <span class="search-icon">
               <i class="fa fa-search fa-lg" style="margin: 25px 10px 25px 20px;"></i>
             </span>
-            <input autocomplete="off" placeholder="SEARCH..." type="text" id="local-search-input">
+            <input autocomplete="off" placeholder="搜索..." type="text" id="local-search-input">
           </div>
         </div>
         <div id="local-search-result"></div>
