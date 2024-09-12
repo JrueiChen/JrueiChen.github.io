@@ -244,10 +244,12 @@
 
           
           
+          
+          
           <li>
-            <a href="/archive/">
+            <a href="/about/">
               
-              ARCHIVES
+              ABOUT
               
               
             </a>
@@ -255,12 +257,10 @@
           
           
           
-          
-          
           <li>
-            <a href="/about/">
+            <a href="/archive/">
               
-              ABOUT
+              ARCHIVES
               
               
             </a>
@@ -490,7 +490,7 @@
 <hr>
 <h1 id="指数增长模型二"><a href="#指数增长模型二" class="headerlink" title="指数增长模型二"></a>指数增长模型二</h1><h2 id="模型假设-1"><a href="#模型假设-1" class="headerlink" title="模型假设"></a>模型假设</h2><p>在这个模型中，我们对于人口增长的增长率分离出来单独进行拟合，同样的，本模型不考虑自然资源的限制对人口的增长的影响。</p>
 <h2 id="模型构建-1"><a href="#模型构建-1" class="headerlink" title="模型构建"></a>模型构建</h2><p>当考察一个国家或一个较大地区的人口随时间延续而变化的规律时，为了利用微积分这一数学工具，可以将人口看做连续时间t的连续可微函数x(t)，记初始时刻（t=0）的人口为<script type="math/tex">x_{0}</script>，假设单位时间人口增长率为常数r，rx(t) 就是单位时间内x(t)的增长率<script type="math/tex">\frac{\mathrm{d} x}{\mathrm{d} t}</script>，于是得到 x(t) 满足的微分方程和初始条件</p>
-<script type="math/tex; mode=display">\frac{\mathrm{d} x}{\mathrm{d} t}=rx，x（0）=x_{0}</script><p>将该公式进行变量分离可以得出</p>
+<script type="math/tex; mode=display">\frac{\mathrm{d} x}{\mathrm{d} t}=rx，x(0)=x_{0}</script><p>将该公式进行变量分离可以得出</p>
 <script type="math/tex; mode=display">x(t)=x_{0}e^{rt}</script><p>当x&gt;0时，人口将按指数规律无限增长。</p>
 <h2 id="模型求解-1"><a href="#模型求解-1" class="headerlink" title="模型求解"></a>模型求解</h2><p>对于得到的常微分方程是比较容易人工得出 x(t) 的模型的，所以我们进行人工计算之后代入到MATLAB，<script type="math/tex">x_{0}</script>直接使用美国1970年的总人口3.9（单位：百万），r 是直接求取这21年的增长率平均值得到的。</p>
 <p>MATLAB代码如下：</p>
@@ -501,7 +501,7 @@
 <h1 id="改进后的指数增长模型"><a href="#改进后的指数增长模型" class="headerlink" title="改进后的指数增长模型"></a>改进后的指数增长模型</h1><h2 id="建模假设"><a href="#建模假设" class="headerlink" title="建模假设"></a>建模假设</h2><p>由于增长率不是一成不变的，所以我们对之前的模型进行重新的修改，将指数部分进行线性拟合，同时还是不考虑自然资源限制对人口增长的影响。</p>
 <p>模型构建：</p>
 <p>我们将指数增长模型二改写为</p>
-<script type="math/tex; mode=display">\frac{\mathrm{d} x}{\mathrm{d} t}=rx，x（0）=x_{0}</script><p>其中，令r为一个线性函数</p>
+<script type="math/tex; mode=display">\frac{\mathrm{d} x}{\mathrm{d} t}=rx，x(0)=x_{0}</script><p>其中，令r为一个线性函数</p>
 <script type="math/tex; mode=display">r=r(t)=r_{1}t+r_{0}</script><h2 id="模型求解-2"><a href="#模型求解-2" class="headerlink" title="模型求解"></a>模型求解</h2><p>使用MATLAB中的Curve Fitting Tool进行线性拟合得出<script type="math/tex">r_{1}=-0.0114,r_{0}=0.3252</script></p>
 <p><img src="/undefined/logistics/ExponentialPartialFitting.png" alt="ExponentialPartialFitting"></p>
 <p>将该数据带入到MATLAB中常微分方程的求解</p>
@@ -698,7 +698,7 @@
 </li>
 </ol>
 <p>由此导出的增长率函数为<script type="math/tex">r(x)=r(1-\frac{x}{x_{m}})</script>。用 r(x) 代替指数增长模型二中的r，得到</p>
-<script type="math/tex; mode=display">\frac{\mathrm{d} x}{\mathrm{d} t}=rx(1-\frac{x}{x_{m}})，x（0）=x_{0}</script><p>方程右端的因子<script type="math/tex">rx</script>体现人口自身的增长趋势，因子<script type="math/tex">(1-\frac{x}{x_{m}})</script>则体现了资源和环境对人口增长的阻滞作用。显然 x 越大，前一因子越大，后一因子越小，人口增长是两个因子共同作用的结果。</p>
+<script type="math/tex; mode=display">\frac{\mathrm{d} x}{\mathrm{d} t}=rx(1-\frac{x}{x_{m}})，x(0)=x_{0}</script><p>方程右端的因子<script type="math/tex">rx</script>体现人口自身的增长趋势，因子<script type="math/tex">(1-\frac{x}{x_{m}})</script>则体现了资源和环境对人口增长的阻滞作用。显然 x 越大，前一因子越大，后一因子越小，人口增长是两个因子共同作用的结果。</p>
 <h2 id="模型求解-3"><a href="#模型求解-3" class="headerlink" title="模型求解"></a>模型求解</h2><p>我们将常微分方程通过变量分离可以得到</p>
 <script type="math/tex; mode=display">x(t)=\frac{x_{m}}{1+\frac{x_{m}}{(x_{0} -1) e^{-rt}} }</script><p>其中<script type="math/tex">r，x_{0}，x_{m}</script>为参数。</p>
 <h3 id="估计参数方法一"><a href="#估计参数方法一" class="headerlink" title="估计参数方法一"></a>估计参数方法一</h3><p>将常微分方程改写为</p>
