@@ -244,6 +244,17 @@
 
           
           
+          <li>
+            <a href="/archive/">
+              
+              ARCHIVES
+              
+              
+            </a>
+          </li>
+          
+          
+          
           
           
           <li>
@@ -258,9 +269,9 @@
           
           
           <li>
-            <a href="/archive/">
+            <a href="/tags/">
               
-              ARCHIVES
+              TAGS
               
               
             </a>
@@ -272,17 +283,6 @@
             <a href="/categories/">
               
               CATEGORIES
-              
-              
-            </a>
-          </li>
-          
-          
-          
-          <li>
-            <a href="/tags/">
-              
-              TAGS
               
               
             </a>
@@ -474,6 +474,23 @@
         <hr>
         
         <div class="post-preview">
+          <a href="/undefined/Feralcat/">
+            <h2 class="post-title">
+              楼下的猫
+              
+              -- 
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              生命里有些机缘，是需要等待的……
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
           <a href="/undefined/April/">
             <h2 class="post-title">
               四月与谎言
@@ -491,16 +508,16 @@
         <hr>
         
         <div class="post-preview">
-          <a href="/undefined/Feralcat/">
+          <a href="/undefined/Keigo/">
             <h2 class="post-title">
-              楼下的猫
+              凶手是时间
               
               -- 
               
             </h2>
             
             <h3 class="post-subtitle">
-              生命里有些机缘，是需要等待的……
+              它不需要华丽的诡计，不想倾听任何人的祷告与哀求……
             </h3>
             
           </a>
@@ -542,16 +559,16 @@
         <hr>
         
         <div class="post-preview">
-          <a href="/undefined/Keigo/">
+          <a href="/undefined/NightBreeze/">
             <h2 class="post-title">
-              凶手是时间
+              晚风
               
               -- 
               
             </h2>
             
             <h3 class="post-subtitle">
-              它不需要华丽的诡计，不想倾听任何人的祷告与哀求……
+              好多好多奇怪的小家伙在跳舞啊……
             </h3>
             
           </a>
@@ -576,16 +593,16 @@
         <hr>
         
         <div class="post-preview">
-          <a href="/undefined/NightBreeze/">
+          <a href="/undefined/RedPig/">
             <h2 class="post-title">
-              晚风
+              《红猪》
               
               -- 
               
             </h2>
             
             <h3 class="post-subtitle">
-              好多好多奇怪的小家伙在跳舞啊……
+              “补票：去感受亚得里亚海的美丽。”
             </h3>
             
           </a>
@@ -610,16 +627,16 @@
         <hr>
         
         <div class="post-preview">
-          <a href="/undefined/RedPig/">
+          <a href="/undefined/qiaolezi/">
             <h2 class="post-title">
-              《红猪》
+              裹着心的光
               
               -- 
               
             </h2>
             
             <h3 class="post-subtitle">
-              “补票：去感受亚得里亚海的美丽。”
+              那些你很冒险的梦，我陪你去疯，折纸飞机碰到雨天，终究会坠落
             </h3>
             
           </a>
@@ -637,23 +654,6 @@
             
             <h3 class="post-subtitle">
               “这个世界值得我们去好好生活。”
-            </h3>
-            
-          </a>
-        </div>
-        <hr>
-        
-        <div class="post-preview">
-          <a href="/undefined/qiaolezi/">
-            <h2 class="post-title">
-              裹着心的光
-              
-              -- 
-              
-            </h2>
-            
-            <h3 class="post-subtitle">
-              那些你很冒险的梦，我陪你去疯，折纸飞机碰到雨天，终究会坠落
             </h3>
             
           </a>
@@ -1325,5 +1325,21 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	</body>
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+</body>
 </html>
